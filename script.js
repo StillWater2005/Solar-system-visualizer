@@ -1,7 +1,9 @@
 const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto"];
 const distances = [1, 1.85, 2.56, 3.90, 13.33, 24.56, 49.28, 77.05, 101.28];
 const mercury_rad = 4;
-const delay = 25;
+const delay = 20;
+let year = 0;
+const year_text = document.querySelector(".year-text");
 const radius_list = distances.map((element) => {
     return element * mercury_rad;
 })
@@ -35,6 +37,7 @@ function update(){
         let angle = angle_rad(periods[i], time);
         planet_x[i] = radius_list[i] * Math.cos(angle);
         planet_y[i] = radius_list[i] * Math.sin(angle);
+        year = (time/mercury_period)/rel_periods[2];
     }
 }
 
@@ -43,6 +46,7 @@ function paint(){
     {
         set_planet(planet_node[i], planet_x[i], planet_y[i]);
     }
+    year_text.textContent = `${year.toFixed(2)}`;
 }
 
 function simulate(){
