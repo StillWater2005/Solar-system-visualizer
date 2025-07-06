@@ -2,7 +2,6 @@ body{
     background-color: black;
 }
 .planet, .sun{
-    background-color: black;
     border-radius: 50%;
     width: 6px;
     height: 6px;
