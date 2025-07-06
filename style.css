@@ -1,0 +1,50 @@
+body{
+    background-color: black;
+}
+.planet, .sun{
+    background-color: black;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 400px;
+    left: 900px;
+    background-color: white;
+}
+
+.sun{
+    background-color: #FFD700;
+}
+
+.mercury{
+    	background-color: 	#B1B1B1;
+}
+
+.venus{
+    background-color: 	#EEDC82;
+}
+
+.earth{
+    background-color: #2E8B57;
+}
+
+.mars{
+    background-color: #B22222;
+}
+
+.jupiter{
+    background-color: #D2691E;
+}
+
+.saturn{
+    background-color: #DAA520;
+}
+
+.uranus{
+    background-color: #AFEEEE;
+}
+
+.neptune{
+    background-color: #4169E1;
+}
