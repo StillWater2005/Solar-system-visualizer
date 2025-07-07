@@ -21,8 +21,8 @@ function set_planet(planet_node, x, y)
 
 let time = 0;
 const rel_periods = [1, 2.58, 4.17, 7.83, 49.42, 122.75, 350, 686.67, 1033.33];
-const mercury_period = 100;
-const periods = rel_periods.map((element) => {
+let mercury_period = 100;
+let periods = rel_periods.map((element) => {
     return element * mercury_period;
 })
 
@@ -56,3 +56,21 @@ function simulate(){
 }
 
 setInterval(simulate, delay);
+
+//Speed Controller
+let speed_slider = document.querySelector(".speed-slider");
+let slider_value = document.querySelector(".slider-value");
+let value = +speed_slider.value;
+setInterval(() =>{
+    let new_value = +speed_slider.value;
+    if(value != new_value)
+    {
+    value = new_value;
+    slider_value.textContent = `${value}`;
+    mercury_period = 1000/(value * rel_periods[2]);
+    periods = rel_periods.map((element) => {
+    return element * mercury_period;
+    })
+    time = 0;
+    }
+},100)

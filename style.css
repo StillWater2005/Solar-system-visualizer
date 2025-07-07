@@ -53,3 +53,16 @@ body{
     font-size: 20px;
     text-align: center;
 }
+
+.speed-slider-label{
+    color: white;
+}
+
+.slider-value{
+    color:white;
+}
+.slider-container{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
